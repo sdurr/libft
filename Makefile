@@ -6,7 +6,7 @@
 #    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 10:41:23 by sdurr             #+#    #+#              #
-#    Updated: 2015/01/03 15:49:17 by sdurr            ###   ########.fr        #
+#    Updated: 2015/02/05 08:44:13 by sdurr            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,13 +17,9 @@ HPATH = -I
 CPATH = ./srcs/
 
 SRCS = ft_atoi.c\
-			ft_lstadd.c \
-			ft_lstnew.c \
-			ft_lstiter.c \
-			ft_lstdelone.c \
-			ft_lstdel.c \
-			ft_lstmap.c \
+			ft_long_long.c \
 			ft_bzero.c\
+			get_next_line.c\
         	ft_isalnum.c\
         	ft_isalpha.c\
         	ft_isascii.c\
@@ -74,11 +70,14 @@ SRCS = ft_atoi.c\
 			ft_strmap.c\
 			ft_strmapi.c\
 			ft_strsplit.c\
+			ft_copy_tmp.c\
 			ft_count_char.c\
 			ft_word_long.c\
 			ft_itoa.c\
 			ft_long_int.c\
 			ft_revers.c\
+			ft_split_s.c\
+			ft_last_line.c\
 
 OBJS 	= 	$(SRCS:.c=.o)
 

@@ -5,65 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/03 14:30:13 by sdurr             #+#    #+#             */
-/*   Updated: 2015/01/03 17:30:04 by sdurr            ###   ########.fr       */
+/*   Created: 2014/11/12 11:17:09 by sdurr             #+#    #+#             */
+/*   Updated: 2014/12/02 09:55:02 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include <string.h>
 
-static char		**ft_error(const char *s, char **ret)
+char	**ft_strsplit(char const *s, char c)
 {
-	if (ft_strlen(s) == 0 || !s)
-		ret[0] = NULL;
-	else
-	{
-		ret[0] = ft_strdup(s);
-		ret[1] = NULL;
-	}
-	return (ret);
-}
+	char	**ret;
+	int		i;
+	int		j;
+	int		k;
 
-static char		**ft_transfer(const char *s, char **ret, char c)
-{
-	int			i;
-	int			j;
-
-	i = 0;
-	while (*s != '\0')
-	{
-		while (*s == c && *s != '\0')
-			s++;
-		if (*s == '\0' && i == 0)
-			return (ft_error(s, ret));
-		if (!(ret[i] = (char *)malloc(sizeof(char) * ft_word_long(s, c) + 1)))
-			return (NULL);
-		j = 0;
-		while (*s != c && *s != '\0')
-			ret[i][j++] = *s++;
-		ret[i][j] = '\0';
-		if (*s != '\0' || i == 0)
-			i++;
-	}
-	ret[i] = NULL;
-	return (ret);
-}
-
-char			**ft_strsplit(char const *s, char c)
-{
-	char		**ret;
-	const char	*tmp;
-
-	tmp = s;
-	if (!(ret = (char **)malloc(sizeof(char *) * ft_count_char(s, c) + 1)))
+	i = ft_count_char((char*)s, c);
+	j = 0;
+	if (!s)
 		return (NULL);
-	if (ft_strlen(s) == 0 || !c || *tmp == '\0')
-		return (ft_error(s, ret));
-	while (*tmp != c && *tmp != '\0')
-		tmp++;
-	if (*tmp == '\0')
-		return (ft_error(s, ret));
-	ret = ft_transfer(s, ret, c);
+	if (!(ret = (char **)malloc(sizeof(char*) * i + 1)))
+		return (NULL);
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		while (s[i] != c && s[i] && k++)
+			i++;
+		if (k)
+			ret[j++] = ft_strsub(s, i - k, k);
+	}
+	ret[j] = '\0';
 	return (ret);
 }

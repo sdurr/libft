@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_word_long.c                                     :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
+/*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/12 15:18:07 by sdurr             #+#    #+#             */
-/*   Updated: 2014/11/28 11:56:58 by sdurr            ###   ########.fr       */
+/*   Created: 2014/11/28 17:49:58 by getrembl          #+#    #+#             */
+/*   Updated: 2014/12/27 11:10:26 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_word_long(char *s, char c, int i)
-{
-	int len;
+#ifndef		GET_NEXT_LINE_H
+# define	GET_NEXT_LINE_H
 
-	len = 3;
-	while (s[i] != c && s[i] != '\0')
-	{
-		len++;
-		i++;
-	}
-	if (s[i] == '\0')
-		return (-1);
-	else
-		return (len);
-}
+# define	BUFF_SIZE	10
+
+# include <string.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <fcntl.h>
+# include "libft.h"
+
+int			get_next_line(int const fd, char **line);
+
+#endif

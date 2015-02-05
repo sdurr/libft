@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 08:59:50 by sdurr             #+#    #+#             */
-/*   Updated: 2015/01/05 11:22:07 by sdurr            ###   ########.fr       */
+/*   Updated: 2014/11/28 11:52:02 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,5 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 				return (0);
 		}
 	}
-	if (!s1 || !s2)
-		return (0);
 	return (1);
 }

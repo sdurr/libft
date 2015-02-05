@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/20 09:25:33 by sdurr             #+#    #+#             */
-/*   Updated: 2014/12/05 13:29:24 by sdurr            ###   ########.fr       */
+/*   Updated: 2014/11/28 11:44:15 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ char	**ft_split_s(char const *s, char **ret, char *tmp, char c)
 		if (j < ft_count_char((char *)s, c) - 1)
 			j++;
 	}
-	ret[j] = NULL;
 	return (ret);
 }

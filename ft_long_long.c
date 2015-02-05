@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_word_long.c                                     :+:      :+:    :+:   */
+/*   ft_long_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/12 15:18:07 by sdurr             #+#    #+#             */
-/*   Updated: 2014/11/28 11:56:58 by sdurr            ###   ########.fr       */
+/*   Created: 2014/11/13 09:29:15 by sdurr             #+#    #+#             */
+/*   Updated: 2014/12/29 20:54:20 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_word_long(char *s, char c, int i)
+long		ft_long_long(long n)
 {
-	int len;
+	long ret;
 
-	len = 3;
-	while (s[i] != c && s[i] != '\0')
+	ret = 1;
+	if (n < 0)
 	{
-		len++;
-		i++;
+		ret++;
+		n = n * -1;
 	}
-	if (s[i] == '\0')
-		return (-1);
-	else
-		return (len);
+	while (n > 0)
+	{
+		n = n / 10;
+		ret++;
+	}
+	return (ret);
 }
