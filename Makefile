@@ -6,13 +6,13 @@
 #    By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/10 10:41:23 by sdurr             #+#    #+#              #
-#    Updated: 2015/02/05 08:44:13 by sdurr            ###   ########.fr        #
+#    Updated: 2015/02/12 13:11:08 by sdurr            ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = 		libft.a
 
-HPATH = -I
+HPATH = -I libft/includes
 
 CPATH = ./srcs/
 

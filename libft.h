@@ -6,7 +6,7 @@
 /*   By: sdurr <sdurr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 13:31:39 by sdurr             #+#    #+#             */
-/*   Updated: 2015/02/05 08:41:13 by sdurr            ###   ########.fr       */
+/*   Updated: 2015/02/12 15:53:05 by sdurr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ int			ft_isprint(int c);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
 int			ft_strequ(char const *s1, char const *s2);
-int			get_next_line(int const fd, char **line);
 
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
@@ -81,7 +80,7 @@ int			ft_word_long(char *s, char c, int i);
 int			ft_copy_tmp(char *s, int i, char c, char *tmp);
 int			ft_long_int(int n);
 
-long			ft_long_long(long n);
+long		ft_long_long(long n);
 
 char		**ft_split_s(char const *s, char **ret, char *tmp, char c);
 char		**ft_last_line(char const *s, char **ret, char c);
